@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+
 /*
- Codable estructura a json
+ Codable
  Encodable
- Decodable de json a estructura
+ Decodable
  
  */
 
