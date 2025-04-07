@@ -7,15 +7,15 @@
 
 import SwiftUI
 
+
 class DragonBallAPI: Codable{
-    let url_base = "https://dragonball-api.com/api"
-   
+    var url_base = "https://dragonball-api.com/api"
+    
     func descargar_pagina_personajes() async -> PaginaResultado? {
         let ubicacion_recurso = "/characters"
         
         return await descargar(recurso: ubicacion_recurso)
     }
-    
     
     
     
@@ -25,9 +25,16 @@ class DragonBallAPI: Codable{
             let (datos, respuesta) = try await URLSession.shared.data(from: url)
             guard let respuesta = respuesta as? HTTPURLResponse else { throw ErroresDeRed.badResponse }
             guard respuesta.statusCode >= 200 && respuesta.statusCode < 300  else { throw ErroresDeRed.badStatus }
-            guard let respuesta_decodificada = try? JSONDecoder().decode(TipoGenerico.self, from: datos) else { throw ErroresDeRed.fallaAlConvertirLaRespuesta }
-            
-            return respuesta_decodificada
+            do{
+                let respuesta_decodificada = try JSONDecoder().decode(TipoGenerico.self, from: datos)
+                
+                return respuesta_decodificada
+            }
+            catch let error as NSError{
+                print("EL ERROR EN TU MODELO ES:\(error.debugDescription) ")
+                throw ErroresDeRed.fallaAlConvertirLaRespuesta
+            }
+            //return respuesta_decodificada
         }
         
         catch ErroresDeRed.badUrl {
@@ -41,7 +48,7 @@ class DragonBallAPI: Codable{
         }
         catch ErroresDeRed.fallaAlConvertirLaRespuesta {
             print("Tienes mal el modelo o la implementacion de este")
-            print("En DragonBall api")
+            print("EN dragon ball api")
         }
         
         catch ErroresDeRed.invalidRequest {
@@ -53,5 +60,4 @@ class DragonBallAPI: Codable{
         
         return nil
     }
-    
 }

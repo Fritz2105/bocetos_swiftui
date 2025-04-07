@@ -5,8 +5,6 @@
 //  Created by alumno on 4/2/25.
 //
 
-import Foundation
-
 struct MonoChino: Identifiable, Codable{
     let id: Int
     let name: String
@@ -17,8 +15,9 @@ struct MonoChino: Identifiable, Codable{
     let description: String
     let image: String
     let affiliation: String
+
+    let originPlanet: Planeta?
     
-    let originPlanet: Planeta
     //let transformations: Array<Transformacion>
-    let transformations: [Transformacion]
+    let transformations: [Transformacion]?
 }

@@ -16,11 +16,10 @@ struct Meta: Codable{
 struct Enlaces: Codable{
     let first: String
     let previous: String
-    let nexr: String
+    let next: String
     let last: String
 }
 struct PaginaResultado: Codable{
-    //var ide = Self.meta.currentPage
     let items: [MonoChino]
     let meta: Meta
     let links: Enlaces
