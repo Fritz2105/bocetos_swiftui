@@ -5,7 +5,7 @@
 //  Created by alumno on 4/2/25.
 //
 
-struct MonoChino: Identifiable, Codable{
+class MonoChino: Identifiable, Codable{
     let id: Int
     let name: String
     let ki: String

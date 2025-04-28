@@ -1,10 +1,3 @@
-//
-//  controlador_app.swift
-//  RedesSociales
-//
-//  Created by alumno on 3/31/25.
-//
-
 import SwiftUI
 // import Foundation
 
@@ -19,12 +12,12 @@ public class ControladorAplicacion{
     
     // Seccion Dragon Balll
     var pagina_resultados: PaginaResultado? = nil
+    var personaje: MonoChino? = nil
     
     
     init(){
         Task.detached(priority: .high){
             await self.descargar_publicaciones()
-            
             await self.descargar_monos_chinos()
         }
     }
@@ -33,6 +26,18 @@ public class ControladorAplicacion{
         guard let pagina_descargada: PaginaResultado = try? await DragonBallAPI().descargar_pagina_personajes() else { return }
         
         self.pagina_resultados = pagina_descargada
+    }
+    
+    func descargar_info_personaje(id: Int) async {
+        guard let mono_chino: MonoChino = try? await DragonBallAPI().descargar_informacion_personaje(id: id) else { return }
+        
+        self.personaje = mono_chino
+    }
+    
+    func descargar_informacion_personaje(id: Int){
+        Task.detached(operation: {
+            await self.descargar_info_personaje(id: id)
+        })
     }
     
     func descargar_publicaciones() async {
