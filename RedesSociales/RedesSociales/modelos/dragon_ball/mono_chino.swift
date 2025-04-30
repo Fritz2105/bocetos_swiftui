@@ -13,8 +13,9 @@ class MonoChino: Identifiable, Codable{
     let race: String
     let gender: String
     let description: String
-    let image: String
     let affiliation: String
+    let image: String
+    
 
     let originPlanet: Planeta?
     

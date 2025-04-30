@@ -21,11 +21,40 @@ struct PantallaPersonajes: View {
                         LazyVStack{
                             ForEach(controlador.pagina_resultados!.items){ personaje in
                                 NavigationLink {
-                                    Text("Hola mundo \(controlador.personaje?.originPlanet?.name)")
+                                    //AQUI
+                                    PantallaPersonaje()
+                                    ScrollView{
+                                    //Text("Hello ,\(controlador.personaje?.originPlanet?.name)")
+                                    Text("Nombre: \(personaje.name)")
+                                    Text("Ki: \(personaje.ki)")
+                                    Text("Ki maximo: \(personaje.maxKi)")
+                                    Text("Raza: \(personaje.race)")
+                                    Text("Genero: \(personaje.gender)")
+                                    Text("Afiliacion: \(personaje.affiliation)")
+                                    Text("Planeta: \(personaje.originPlanet?.name)")
+                                    Text("Transformacion: \(personaje.originPlanet?.name)")
+                                    Text("Descripcion: \(personaje.description)")
+                                    
+                                    
+                                    AsyncImage(url: URL(string: personaje.image)){ image in
+                                        image.resizable()
+                                    } placeholder: {
+                                        ProgressView()
+                                    }
+                                    .frame(width: 200, height: 400)
+                                    }
+                                    
+                                    
                                 } label: {
                                     Text("El personaje es \(personaje.name)")
-                                    AsyncImage(url: URL(string: personaje.image))
-                                }.simultaneousGesture(TapGesture().onEnded({
+                                    /*AsyncImage(url: URL(string: personaje.image),
+                                     scale:3)*/
+                                    AsyncImage(url: URL(string: personaje.image)){ image in
+                                        image.resizable()
+                                    } placeholder: {
+                                        ProgressView()
+                                    }
+                                    .frame(width: 60, height: 100)                                }.simultaneousGesture(TapGesture().onEnded({
                                     controlador.descargar_informacion_personaje(id: personaje.id)
                                 }))
                             }
@@ -41,5 +70,9 @@ struct PantallaPersonajes: View {
     PantallaPersonajes()
         .environment(ControladorAplicacion())
 }
-//se debe de hacer que cuando precione la imagen de un personaje me muestre en la siguiente pantalla que ahora muestra "Hola mundo nil"
+//con el siguiente codigo en Swift UI se muestran los personajes y su nombre en la pantalla, ahora se debe de hacer que cuando precione la imagen de un personaje me muestre en la siguiente pantalla que ahora muestra "Hola mundo PRUEBA nil"
 //muestre todos los datos acerca del personaje
+/*
+Fuentes para investigar:
+ https://www-swiftyplace-com.translate.goog/blog/asyncimage-load-image-url-swiftui?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
+*/

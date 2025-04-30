@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB2552272DC28C6D00E22B15 /* PantallaPersonaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2552262DC28C6D00E22B15 /* PantallaPersonaje.swift */; };
 		FB4A8FFF2D91B0D600AA9DBF /* RedesSocialesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A8FFE2D91B0D600AA9DBF /* RedesSocialesApp.swift */; };
 		FB4A90012D91B0D600AA9DBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A90002D91B0D600AA9DBF /* ContentView.swift */; };
 		FB4A90032D91B0D600AA9DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4A90022D91B0D600AA9DBF /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB2552262DC28C6D00E22B15 /* PantallaPersonaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaPersonaje.swift; sourceTree = "<group>"; };
 		FB4A8FFB2D91B0D600AA9DBF /* RedesSociales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedesSociales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4A8FFE2D91B0D600AA9DBF /* RedesSocialesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedesSocialesApp.swift; sourceTree = "<group>"; };
 		FB4A90002D91B0D600AA9DBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				FBA234BD2D9D952D00D421A3 /* mono_chino.swift */,
 				FBA234C12D9D975500D421A3 /* transformacion.swift */,
 				FBA234BF2D9D967300D421A3 /* planeta.swift */,
+				FB2552262DC28C6D00E22B15 /* PantallaPersonaje.swift */,
 			);
 			path = dragon_ball;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				FBA234C72D9D9A9100D421A3 /* pagina_resultados.swift in Sources */,
 				FB4A90012D91B0D600AA9DBF /* ContentView.swift in Sources */,
 				FB4A90172D91BC4100AA9DBF /* controlador_publicaciones.swift in Sources */,
+				FB2552272DC28C6D00E22B15 /* PantallaPersonaje.swift in Sources */,
 				FBEEB8902D9AEECC00EACD3E /* perfil_vista_basica.swift in Sources */,
 				FBD4404F2DA427AB005AC25F /* menu_aplicacion.swift in Sources */,
 				FB4A8FFF2D91B0D600AA9DBF /* RedesSocialesApp.swift in Sources */,
