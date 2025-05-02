@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB2552272DC28C6D00E22B15 /* PantallaPersonaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2552262DC28C6D00E22B15 /* PantallaPersonaje.swift */; };
 		FB4A8FFF2D91B0D600AA9DBF /* RedesSocialesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A8FFE2D91B0D600AA9DBF /* RedesSocialesApp.swift */; };
 		FB4A90012D91B0D600AA9DBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A90002D91B0D600AA9DBF /* ContentView.swift */; };
 		FB4A90032D91B0D600AA9DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4A90022D91B0D600AA9DBF /* Assets.xcassets */; };
@@ -24,6 +23,8 @@
 		FBA234C72D9D9A9100D421A3 /* pagina_resultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA234C62D9D9A9100D421A3 /* pagina_resultados.swift */; };
 		FBD4404F2DA427AB005AC25F /* menu_aplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4404E2DA427AB005AC25F /* menu_aplicacion.swift */; };
 		FBD440512DA42941005AC25F /* PantallaPersonajes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD440502DA42941005AC25F /* PantallaPersonajes.swift */; };
+		FBDF038C2DC5203A00D814DD /* PrevistaMonoChino.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF038B2DC5203A00D814DD /* PrevistaMonoChino.swift */; };
+		FBDF038E2DC5207C00D814DD /* PantallaPersonaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF038D2DC5207C00D814DD /* PantallaPersonaje.swift */; };
 		FBEEB8892D9AECF300EACD3E /* controlador_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEEB8882D9AECF300EACD3E /* controlador_app.swift */; };
 		FBEEB88B2D9AED2E00EACD3E /* comentario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEEB88A2D9AED2E00EACD3E /* comentario.swift */; };
 		FBEEB88D2D9AED4800EACD3E /* perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEEB88C2D9AED4800EACD3E /* perfil.swift */; };
@@ -32,7 +33,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB2552262DC28C6D00E22B15 /* PantallaPersonaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaPersonaje.swift; sourceTree = "<group>"; };
 		FB4A8FFB2D91B0D600AA9DBF /* RedesSociales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedesSociales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4A8FFE2D91B0D600AA9DBF /* RedesSocialesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedesSocialesApp.swift; sourceTree = "<group>"; };
 		FB4A90002D91B0D600AA9DBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +50,8 @@
 		FBA234C62D9D9A9100D421A3 /* pagina_resultados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pagina_resultados.swift; sourceTree = "<group>"; };
 		FBD4404E2DA427AB005AC25F /* menu_aplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_aplicacion.swift; sourceTree = "<group>"; };
 		FBD440502DA42941005AC25F /* PantallaPersonajes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaPersonajes.swift; sourceTree = "<group>"; };
+		FBDF038B2DC5203A00D814DD /* PrevistaMonoChino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevistaMonoChino.swift; sourceTree = "<group>"; };
+		FBDF038D2DC5207C00D814DD /* PantallaPersonaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaPersonaje.swift; sourceTree = "<group>"; };
 		FBEEB8882D9AECF300EACD3E /* controlador_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_app.swift; sourceTree = "<group>"; };
 		FBEEB88A2D9AED2E00EACD3E /* comentario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comentario.swift; sourceTree = "<group>"; };
 		FBEEB88C2D9AED4800EACD3E /* perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil.swift; sourceTree = "<group>"; };
@@ -111,9 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				FBA234C82D9D9A9B00D421A3 /* dragon_ball */,
+				FB4A90102D91B26800AA9DBF /* Publicacion.swift */,
 				FBEEB88A2D9AED2E00EACD3E /* comentario.swift */,
 				FBEEB88C2D9AED4800EACD3E /* perfil.swift */,
-				FB4A90102D91B26800AA9DBF /* Publicacion.swift */,
 			);
 			path = modelos;
 			sourceTree = "<group>";
@@ -121,8 +123,8 @@
 		FB4A900E2D91B19600AA9DBF /* controladores */ = {
 			isa = PBXGroup;
 			children = (
-				FB4A90162D91BC4100AA9DBF /* controlador_publicaciones.swift */,
 				FBEEB8882D9AECF300EACD3E /* controlador_app.swift */,
+				FB4A90162D91BC4100AA9DBF /* controlador_publicaciones.swift */,
 			);
 			path = controladores;
 			sourceTree = "<group>";
@@ -170,9 +172,8 @@
 			children = (
 				FBA234C52D9D9A8000D421A3 /* soporte */,
 				FBA234BD2D9D952D00D421A3 /* mono_chino.swift */,
-				FBA234C12D9D975500D421A3 /* transformacion.swift */,
 				FBA234BF2D9D967300D421A3 /* planeta.swift */,
-				FB2552262DC28C6D00E22B15 /* PantallaPersonaje.swift */,
+				FBA234C12D9D975500D421A3 /* transformacion.swift */,
 			);
 			path = dragon_ball;
 			sourceTree = "<group>";
@@ -188,9 +189,19 @@
 		FBD440522DA42C17005AC25F /* dragon_ball */ = {
 			isa = PBXGroup;
 			children = (
+				FBDF038A2DC5201D00D814DD /* componentes */,
 				FBD440502DA42941005AC25F /* PantallaPersonajes.swift */,
+				FBDF038D2DC5207C00D814DD /* PantallaPersonaje.swift */,
 			);
 			path = dragon_ball;
+			sourceTree = "<group>";
+		};
+		FBDF038A2DC5201D00D814DD /* componentes */ = {
+			isa = PBXGroup;
+			children = (
+				FBDF038B2DC5203A00D814DD /* PrevistaMonoChino.swift */,
+			);
+			path = componentes;
 			sourceTree = "<group>";
 		};
 		FBEEB88E2D9AEEAB00EACD3E /* perfil_basico */ = {
@@ -273,15 +284,16 @@
 			files = (
 				FB4A901B2D91BE1F00AA9DBF /* publicaciones_general.swift in Sources */,
 				FBEEB8922D9AEF2800EACD3E /* publicacion.swift in Sources */,
+				FBDF038C2DC5203A00D814DD /* PrevistaMonoChino.swift in Sources */,
 				FBEEB88D2D9AED4800EACD3E /* perfil.swift in Sources */,
 				FB4A90132D91B4A000AA9DBF /* placeholder_api.swift in Sources */,
 				FBA234BE2D9D952D00D421A3 /* mono_chino.swift in Sources */,
 				FBA234C02D9D967300D421A3 /* planeta.swift in Sources */,
 				FB4A90112D91B26800AA9DBF /* Publicacion.swift in Sources */,
 				FBA234C72D9D9A9100D421A3 /* pagina_resultados.swift in Sources */,
+				FBDF038E2DC5207C00D814DD /* PantallaPersonaje.swift in Sources */,
 				FB4A90012D91B0D600AA9DBF /* ContentView.swift in Sources */,
 				FB4A90172D91BC4100AA9DBF /* controlador_publicaciones.swift in Sources */,
-				FB2552272DC28C6D00E22B15 /* PantallaPersonaje.swift in Sources */,
 				FBEEB8902D9AEECC00EACD3E /* perfil_vista_basica.swift in Sources */,
 				FBD4404F2DA427AB005AC25F /* menu_aplicacion.swift in Sources */,
 				FB4A8FFF2D91B0D600AA9DBF /* RedesSocialesApp.swift in Sources */,

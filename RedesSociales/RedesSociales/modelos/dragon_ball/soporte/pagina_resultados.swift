@@ -26,6 +26,11 @@ struct PaginaResultado: Codable{
     let links: Enlaces
 }
 
+protocol Item: Codable, Identifiable{
+    var id: Int { get set }
+    var name: String { get set }
+}
+
 struct PaginaResultadoPlaneta: Codable{
     let items: [Planeta]
     let meta: Meta
