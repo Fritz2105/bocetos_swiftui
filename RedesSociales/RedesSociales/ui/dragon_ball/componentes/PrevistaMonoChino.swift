@@ -13,5 +13,7 @@ struct PrevistaMonoChino: View {
     var body: some View {
         Text("Est@ es de \(mono_chino.name)")
             .foregroundColor(.white)
+            .font(.custom("Courier New", size: 16))
+            //.font(.custom("japanese", size: 16))
     }
 }

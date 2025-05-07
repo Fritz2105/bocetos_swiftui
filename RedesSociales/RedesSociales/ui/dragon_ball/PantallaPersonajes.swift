@@ -21,8 +21,11 @@ struct PantallaPersonajes: View {
                             NavigationLink{
                                 ZStack{
                                     PantallaPersonaje()
+                                       
+                                        
+                                        
                                 }
-                                .background(Color.cyan) //COLOR DE FONDO DE PANTALLA PERSONAJE
+                               // .background(Color.black) //COLOR DE FONDO DE PANTALLA PERSONAJE
                             } label : {
                                // PrevistaMonoChino(mono_chino: personaje)
                                 //AQUI
@@ -77,6 +80,9 @@ struct PantallaPersonajes: View {
                                 
                             }.simultaneousGesture(TapGesture().onEnded({
                                //  Aqui ejecutamos codigo magico
+                                Task{
+                                    await controlador.descargar_info_personaje(id: personaje.id)
+                                }
                             }))
                             
                             
@@ -178,4 +184,8 @@ Fuentes para investigar:
  https://www-swiftbysundell-com.translate.goog/articles/backgrounds-and-overlays-in-swiftui/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
  Formas integradas:
  https://www-hackingwithswift-com.translate.goog/quick-start/swiftui/swiftuis-built-in-shapes?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
+ Paddings:
+ Fuentes:
+ https://www-swiftyplace-com.translate.goog/blog/swiftui-font-and-texts?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
+ 
 */

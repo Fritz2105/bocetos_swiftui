@@ -13,6 +13,7 @@ public class ControladorAplicacion{
     // Seccion Dragon Balll
     var pagina_resultados: PaginaResultado? = nil
     var personaje: MonoChino? = nil
+    var info_planeta: Planeta? = nil
     
     
     init(){
@@ -30,8 +31,14 @@ public class ControladorAplicacion{
     
     func descargar_info_personaje(id: Int) async {
         guard let mono_chino: MonoChino = try? await DragonBallAPI().descargar_informacion_personaje(id: id) else { return }
-        
+        print("\(mono_chino.originPlanet)")
         self.personaje = mono_chino
+    }
+    
+    func descargar_info_planeta(id: Int) async {
+        guard let planeta: Planeta = try? await DragonBallAPI().descargar_informacion_planeta(id: id) else { return }
+        
+        self.info_planeta = planeta
     }
     
     func descargar_informacion_personaje(id: Int){

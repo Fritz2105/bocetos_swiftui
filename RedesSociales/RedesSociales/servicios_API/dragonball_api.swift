@@ -18,7 +18,13 @@ class DragonBallAPI: Codable{
     }
     
     func descargar_informacion_personaje(id:Int) async -> MonoChino?{
-        let ubicacion_recurso = "/characters\(id)"
+        let ubicacion_recurso = "/characters/\(id)"
+        
+        return await descargar(recurso: ubicacion_recurso)
+    }
+    
+    func descargar_informacion_planeta(id:Int) async -> Planeta?{
+        let ubicacion_recurso = "/planets/\(id)"
         
         return await descargar(recurso: ubicacion_recurso)
     }
